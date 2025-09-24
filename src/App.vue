@@ -57,14 +57,10 @@ import Lista from './components/Lista.vue';
 
 <template>
   <div class="container">
-    <Cabecalho :tarefa-pendentes="getTarefaPendentes().lenght" />
+    <Cabecalho :tarefa-pendentes="getTarefaPendentes().length" />
     <Formulario :tarefa-temp="estado.tarefaTemp" :edita-tarefa-temp="evento => estado.tarefaTemp=evento.target.value" :cadastra-tarefa="cadastraTarefa" :trocar-filtro="evento =>estado.filtro= evento.target.value" />
     <Lista :tarefas="getTarefasFiltradas()" />
   </div>
 </template>
 
-<style scoped>
-  .done{
-    text-decoration: line-through;
-  }
-</style>
+
